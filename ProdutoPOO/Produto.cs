@@ -16,13 +16,15 @@ namespace ProdutoPOO
         {
             return Preco * Quantidade;
         }
-        public void AdicionarProdutos()
-        {
 
+        public void AdicionarProdutos(int qtdAdiciona)
+        {
+            Quantidade += qtdAdiciona;
         }
-        public void RemoverProdutos()
-        {
 
+        public void RemoverProdutos(int qtdRemove)
+        {
+            Quantidade -= qtdRemove;
         }
 
         public override string ToString()

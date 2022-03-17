@@ -17,8 +17,24 @@ namespace ProdutoPOO
             Console.Write("Quantidade no estoque: ");
             p.Quantidade = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
+            Console.WriteLine();
             Console.WriteLine("Dados do produto: " + p );
+
+            Console.Write("Digite o número de produtos a ser adicionados no estoque:");
+            int qtd = int.Parse(Console.ReadLine());
+            p.AdicionarProdutos(qtd);
+
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados: " + p);
+
+            Console.Write("Digite o número de produtos a serem removidos do estoque:");
+            qtd = int.Parse(Console.ReadLine());
+            p.RemoverProdutos(qtd);
+
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados: " + p);
             Console.ReadLine();
+
         }
     }
 }
